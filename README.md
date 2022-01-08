@@ -1,10 +1,15 @@
-# editor-setup
 
-#First create Project Specific settings.json file under .vscode folder then add this below code
+# Editor Setup with prettier & Eslint
 
-#settings.json
+Following the Airbnb style guide , setup our edit for react project
 
-{
+
+## Run Locally
+
+settings.json
+
+```bash
+  {
   // Tailwind Intellisence support (stop css default support then active tailwind emmet)
   "css.validate": false,
   "tailwindCSS.emmetCompletions": true,
@@ -34,9 +39,11 @@
     "javascript": "javascriptreact"
   }
 }
+```
 
-#create .eslintrc.json file in root directory add this below line
+create .eslintrc.json file in root directory add this below line
 
+```bash
 {
   "extends": [
     "airbnb",
@@ -88,10 +95,12 @@
   },
   "plugins": ["prettier", "react", "react-hooks"]
 }
+```
 
+Install dev - dependencies (just add package.json then yarn install)
 
-#add those dev dependency 
-
+```bash
+  
   "devDependencies": {
     "@babel/eslint-parser": "^7.16.5",
     "@babel/preset-react": "^7.16.7",
@@ -105,9 +114,13 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "prettier": "^2.5.1"
   }
-  
-  or add simple lint command into script tag
-  
-  scripts: {
+```
+
+Or Add lint into script section in package.json
+
+```bash
+    scripts: {
     "lint": "yarn add -D prettier && yarn add -D @babel/eslint-parser && yarn add -D @babel/preset-react && npx install-peerdeps --dev eslint-config-airbnb && yarn add -D eslint-config-prettier eslint-plugin-prettier"
 }
+```
+
